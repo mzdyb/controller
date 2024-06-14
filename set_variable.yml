@@ -13,3 +13,6 @@
       set_fact:
         data2: 'efgh'
         cacheable: true
+
+    - debug: var=data1
+    - debug: var=data2
