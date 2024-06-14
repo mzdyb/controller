@@ -1,0 +1,19 @@
+---
+- name: Configure Controller
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+    - name: Add machine credential
+      ansible.controller.credential:
+        controller_host: controller.rh.lab
+        controller_username: admin
+        controller_password: redhat
+        validate_certs: false
+        name: my_cred
+        organization: Default
+        credential_type: Machine
+        state: present
+        inputs:
+          username: my_name
+          password: "{{ temp_password }}"
