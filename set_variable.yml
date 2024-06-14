@@ -12,3 +12,4 @@
     - name: Set fact
       set_fact:
         data2: 'efgh'
+        cacheable: true
