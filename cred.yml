@@ -17,3 +17,6 @@
         inputs:
           username: my_name
           password: "{{ temp_password }}"
+
+    - debug: var=data1
+    - debug: var=data2

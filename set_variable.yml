@@ -1,0 +1,14 @@
+---
+- name: Set variable
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+    - name: Set stats
+      set_stats:
+        data:
+          data1: 'abcd'
+
+    - name: Set fact
+      set_facts:
+        data2: 'efgh'
